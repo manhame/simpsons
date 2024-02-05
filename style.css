@@ -1,0 +1,164 @@
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}
+
+#wrapper {
+    background-color:yellow;
+    padding: 0 5%;
+}
+/* =============HEADER============= */
+h2 {
+    color: white;
+    background-color: rgb(63, 163, 202);
+    text-align: center;
+    font-size: xx-large;
+}
+
+header img {
+    width: 100%;
+    border: 1px solid white;
+}
+
+/* =============MAIN============= */
+
+main{
+  /*  display: flex;*/
+    background-color: white;
+    color:black;
+    align-items: flex-start;
+}
+
+ul#nav-box {
+    /*list-style: none;*/
+    background-color: rgb(63, 163, 202);
+    padding : 20px;
+    text-align: center;
+    width: 100%;
+    
+}
+
+ul#nav-box li {
+    display: inline;
+    color: white;
+    padding : 5px 5px;
+    text-align: center;
+   
+}
+
+ul#nav-box li a {
+    color:white;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#container {
+    display: flex;
+    padding: 10px;
+}
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color:rgb(243, 162, 10);
+    margin: 10px 10px;
+    font-size: xx-large;
+}
+
+article p {
+    background-color: white;
+    margin: 10px 10px;
+    text-align: justify;
+    width: 700px;
+}
+/*
+.box {
+    position: relative;
+    display: flex;
+    padding: 5px;
+    width: 700px;
+    height: 250px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+        
+   
+}*/
+
+.images {
+    position: absolute;
+    width: 700px;
+    height: 230px;
+    object-fit: contain;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    
+    
+}
+
+aside {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(63, 163, 202);
+    padding: 10px 30px;
+    margin: 10px;
+    width: 500px;
+    height : 485px;
+   /* position: absolute;*/
+    float: right;
+   /* top: 600px;
+    left: 800px;*/
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    color : white;
+    text-align: center;
+    margin: 5px 0px; 
+    font-weight: bold;
+    font-size: x-large;  /* color: white; appliquer couleur texte après couleur background*/
+} 
+
+
+aside p {
+     width :300px;
+     height: 200px;
+     text-align: justify;
+}
+ 
+ aside img {
+     width: 250px;
+     border : 2px white solid;
+     
+}
+ 
+ aside figure{
+     flex-direction: column;
+     width: 250px;
+ }
+ 
+
+/* =============FOOTER============= */
+
+
+
+footer {
+    background-color: rgb(95, 103, 207);
+    color: white;
+    text-align: center ;
+}
+
+@media screen and (max-width: 600px) {
+    main{
+        flex-direction: column;
+    }
+}
