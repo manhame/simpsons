@@ -1,20 +1,30 @@
 *{
-    box-sizing:border-box;
-    padding: 0;
     margin: 0;
-    vertical-align: top;
+    padding: 0;
+    box-sizing:border-box;
+    /* vertical-align: top; */
 }
 
+h1, h2, h3, p, a {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+
 #wrapper {
-    background-color:yellow;
+    background-color:#fdd116;
     padding: 0 5%;
 }
 /* =============HEADER============= */
-h2 {
+header h2 {
     color: white;
     background-color: rgb(63, 163, 202);
     text-align: center;
     font-size: xx-large;
+    font-style: italic;
 }
 
 header img {
@@ -24,41 +34,48 @@ header img {
 
 /* =============MAIN============= */
 
+ul#nav-box {
+    /*list-style: none;*/
+    background-color: rgb(63, 163, 202);
+    /* padding : 20px; */
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    display: flex; /* 1. le parent disposera ses enfants directs en Flexbox */
+    flex-direction: row; /* 2. row|column == horz/vert == définition de l'axe principal */
+    justify-content: center; /* 3. space-between|space-around|space-evenly|center|flex-start|flex-end disposition des enfants d'après l'axe principal */
+    align-items: center; /* 4. space-between|space-around|space-evenly|center|flex-start|flex-end disposition des enfants d'après l'axe secondaire */
+    /* gap: 20px; */
+}
+
+ul#nav-box li {
+    /* display: inline; */
+    color: white;
+    /* padding : 5px 5px; */
+    text-align: center;
+   height: 80px;
+   display: flex;
+   align-items: center;
+}
+
+ul#nav-box li a {
+    padding: 20px 10px;
+    color:white;
+    font-weight: bold;
+    /* display: inline-block; */
+    text-decoration: none;
+    height: 100%;
+}
+
 main{
   /*  display: flex;*/
     background-color: white;
     color:black;
-    align-items: flex-start;
-}
-
-ul#nav-box {
-    /*list-style: none;*/
-    background-color: rgb(63, 163, 202);
-    padding : 20px;
-    text-align: center;
-    width: 100%;
-    
-}
-
-ul#nav-box li {
-    display: inline;
-    color: white;
-    padding : 5px 5px;
-    text-align: center;
-   
-}
-
-ul#nav-box li a {
-    color:white;
-    font-weight: bold;
-    display: inline-block;
-    text-decoration: none;
-}
-
-#container {
+    /* align-items: flex-start; */
     display: flex;
     padding: 10px;
 }
+
 article {
     display: flex;
     flex-direction: column;
@@ -74,31 +91,26 @@ article p {
     background-color: white;
     margin: 10px 10px;
     text-align: justify;
-    width: 700px;
+    width: 680px;
 }
-/*
-.box {
-    position: relative;
-    display: flex;
-    padding: 5px;
-    width: 700px;
-    height: 250px;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-        
-   
-}*/
 
 .images {
-    position: absolute;
-    width: 700px;
-    height: 230px;
-    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+ /*   object-fit: contain;cover*/
     display: flex;
-    gap: 30px;
-    justify-content: center;
-    
+    flex-direction: row;
+    gap: 2px;
+    justify-content: space-between;    
+}
+
+figure {
+    width: 100%;
+    border: 1px solid black;     
+}
+
+img {
+    width: 100%;
     
 }
 
@@ -109,11 +121,8 @@ aside {
     padding: 10px 30px;
     margin: 10px;
     width: 500px;
-    height : 485px;
-   /* position: absolute;*/
+    height : 620px;
     float: right;
-   /* top: 600px;
-    left: 800px;*/
     justify-content: center;
     align-items: center;
     display: flex;
